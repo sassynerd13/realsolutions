@@ -1,0 +1,42 @@
+(Epic)
+As a user I want to find a fun actionable item
+so I can avoid a boring/nonmotivating new year's resolution
+
+  As a user
+
+    I want the option to sign in, but not be required
+    so I can take a quiz
+
+    I want to complete a quiz
+    so I can view my results/ realsolution
+
+  As a guest user
+
+    I want the option to create an account after the quiz
+    so I can save my results OR try again
+
+    I want to be able to view all 're(al)solutions'
+    so that I can find an actionable item
+    without completing an evaluation
+
+
+  As a signed-in user
+
+    I want the option to complete another evaluation
+    so I can see additional results
+
+    I want to view my previous results:
+
+        I want to view my 'type'
+        so I can read the description assigned to me
+
+        I want to view my 're(al)solutions'
+        so I can access the actionables again
+
+    I want to update my profile
+    so my information is current and secure
+
+
+
+
+

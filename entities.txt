@@ -1,0 +1,15 @@
+Session - Unit for each visit (by guest or user)
+GuestUser - Has session(s) (no other user info)
+
+User - First name, Last name, email, password, User session(s)
+  User Profile - Populated from User entity
+
+
+Assessment - Responses for an entire deck of slides
+  Deck - A set collection of slides
+    Slide - Boolean question used by traitify to capture response to personality question
+
+
+Personality type - Based on assessment
+  Badge - Item for personality type data
+  Re(al)solution - Based on traitify personality type
