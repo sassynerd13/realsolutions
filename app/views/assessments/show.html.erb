@@ -1,6 +1,26 @@
+<!-- Change text-->
 <h1>The Assessment</h1>
 
 <h3>Thanks for taking our assessment</h3>
 
+<!-- add wrapped div with tf-assessment as 4-6 column segment -->
+  <div class="tf-assessment">
+  </div>
+<!-- Temporary solution to hide results so users must continue to next view in user flow. Will be fixed with more JS knowledge. -->
+  <div class="results-totem-traits">
+  </div>
 
-<p>Insert JS widget here!</p>
+<script src="http://cdn.traitify.com/js/api/1.0.0.js"></script>
+<script src="http://cdn.traitify.com/js/widgets/slide_deck/1.0.0.js"></script>
+<script src="http://cdn.traitify.com/js/widgets/results/totem/1.0.0.js"></script>
+<script>
+  Traitify.setPublicKey("<%= ENV['TRAITIFY_PUBLIC'] %>");
+  Traitify.setHost("https://api-sandbox.traitify.com");
+  var assessmentId = "<%= params[:a_id] %>" ;
+
+  Traitify.ui.slideDeck(assessmentId, ".tf-assessment", function(data) {
+    Traitify.ui.resultsTotem(assessmentId, ".tf-assessment", {showTraits: true});
+  });
+
+  Traitify.ui.resultsTotem(assessmentId, ".results-totem-traits", {showTraits: true});
+</script>

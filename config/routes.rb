@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
     get 'assessment' => 'assessments#index'
     get 'assessment/:a_id' => 'assessments#show', as: 'current_assessment'
-
+    get 'assessment/:a_id' => 'personality_types#show', as: 'results'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
