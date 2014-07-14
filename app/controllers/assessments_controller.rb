@@ -10,7 +10,6 @@ class AssessmentsController < ApplicationController
   end
 
   def show
-  # move to assessment show view
     # link_to results_path(params[:a_id])
   end
 end

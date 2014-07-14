@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
    resources :personality_types, only: [:index]
 
-    get 'assessment' => 'assessments#index'
-    get 'assessment/:a_id' => 'assessments#show', as: 'current_assessment'
-    get 'assessment/:a_id' => 'personality_types#show', as: 'results'
+    get 'assessments' => 'assessments#index'
+    get 'assessments/:a_id' => 'assessments#show', as: 'current_assessment'
+    get 'results/:a_id' => 'personality_types#view', as: 'results'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

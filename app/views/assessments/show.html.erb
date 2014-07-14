@@ -1,18 +1,28 @@
 <!-- Change text-->
-<h1>The Assessment</h1>
+<h3  class="text-center">The Assessment</h1>
+<h5 class="text-center">Thanks for taking our assessment</h3>
 
-<h3>Thanks for taking our assessment</h3>
-
-<!-- add wrapped div with tf-assessment as 4-6 column segment -->
-  <div class="tf-assessment">
+  <div class="row">
+    <div class="small-9 small-centered columns">
+      <div class="tf-assessment"></div>
+    </div>
   </div>
-<!-- Temporary solution to hide results so users must continue to next view in user flow. Will be fixed with more JS knowledge. -->
-  <div class="results-totem-traits">
+
+  <p class="text-center">When you're done, and ONLY when you're done, click here:</p><br />
+  <p class="text-center">
+    <%= link_to '<button class="button medium">See your Results</button>'.html_safe, results_path(params[:a_id]) %>
+  </p>
+
+  <!-- Temporary solution to hide results so users must continue to next view in user flow. Will be fixed with more JS knowledge. -->
+  <div class="results-totem-traits" style="visibility: hidden; display:inline;">
   </div>
 
 <script src="http://cdn.traitify.com/js/api/1.0.0.js"></script>
 <script src="http://cdn.traitify.com/js/widgets/slide_deck/1.0.0.js"></script>
 <script src="http://cdn.traitify.com/js/widgets/results/totem/1.0.0.js"></script>
+
+<!-- Note that the assessmentId var is being set to the a_id passed to this view in the URL -->
+
 <script>
   Traitify.setPublicKey("<%= ENV['TRAITIFY_PUBLIC'] %>");
   Traitify.setHost("https://api-sandbox.traitify.com");
@@ -24,3 +34,4 @@
 
   Traitify.ui.resultsTotem(assessmentId, ".results-totem-traits", {showTraits: true});
 </script>
+

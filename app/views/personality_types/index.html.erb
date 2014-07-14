@@ -1,0 +1,19 @@
+<h3>Our Re{al}solutions:</h3>
+<p>Below are all of our personalized recommendation based on the Traitify personality types. Feel free to check them out and try them for yourself!</p><br />
+<table>
+  <% @personality_types.each do |personality_type| %>
+    <tr class="personality_type">
+      <td><%= personality_type.type_name %>: </td>
+    </tr>
+    <tr class="realsolution">
+      <td><%= personality_type.realsolution.each_line("-") { |s| p s } %>
+      </td>
+    </tr>
+    <% end %>
+</table>
+
+<br />
+<p class="text-center"><b>Curious which of these is best for you?</b></p><br />
+<p class="text-center"><%= link_to '<button class="button large">Take the Quiz!</button>'.html_safe,
+assessments_path %></p>
+

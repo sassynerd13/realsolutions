@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -15,7 +16,9 @@
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
-          <h1><a href="#">New Year's Re[al]solutions</a></h1>
+          <h1>
+            <%= link_to "New Year's Re{al}solutions", root_path %>
+          </h1>
         </li>
       </ul>
 
@@ -34,7 +37,7 @@
               <% if user_signed_in? %>
                 <li>
                   <a href="#">
-                    <%= link_to "My Profile", user_personality_type_path %>
+                     <!-- link_to "My Profile", user_personality_type_path -->
                   </a>
                 </li>
                 <li>
@@ -64,9 +67,10 @@
         </ul>
       </section>
     </nav>
-
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
-
+  <div class="row">
+    <div class="small-11 small-centered columns">
+      <%= yield %>
+      <%= javascript_include_tag "application" %>
+    </div>
   </body>
 </html>
